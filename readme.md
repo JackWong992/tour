@@ -54,6 +54,26 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 ``` 
+使用`swiper`,将`swiper`加入一个循环中，实现自动循环
+```
+  <swiper-slide v-for="item in swiperList" :key="item.id">
+        <img :src="item.imgUrl" class="swiper-img">
+  </swiper-slide>
+```
+发现轮播图加载bug出现问题，解决：最外层加个div`(<div class="wrapper"></div>)`
+```
+  .wrapper
+    overflow: hidden
+    width: 100%
+    height: 0
+    padding-bottom: 长度/宽度
+```
+发现问题：想给轮播的原点改变颜色，而对于单页面又引入了`<style scoped>`无法全局操作<br>
+解决办法：使用css穿透进行
+```
+  .wrapper >>> .swiper-pagination-bullet-active
+    background: #fff
+```
 ## Installation and operation/安装与运行
 ```
 # 下载到本地
