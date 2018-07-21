@@ -12,15 +12,35 @@
 ```
 3. 解决特殊机型，特殊浏览器的300ms延迟问题<br>
 
+* 安装：
 ```
-安装：
   npm install fastclick --save //不管是开发版本还是上线版本都要引入`fastclick`
-引入:(./router/main.js)
-  fastClick.attach(document.body)
-```
-4. 解决图标问题，引入 `iconfont`
 ```
 
+* 引入:(./router/main.js)
+```
+  fastClick.attach(document.body)
+```
+4. 解决图标问题，引入 `iconfont`<br>
+安装：<br>
+找到相关的图标，下载到本地，保留文件 `iconfont.eot/.svg/.ttf/.woff`至styles下的iconfont文件夹,修改`iconfont.css`的文件路径地址,加入 `./iconfont/ `<br>
+引入(router/main.js):<br>
+```
+  import './assets/styles/iconfont.css'
+```
+## 项目开发ing<br>
+首先是home(首页)组件开发<br>
+1. header.vue部分<br>
+```
+  创建全局css变量:varibles.styl->$bgColor: #00bcd4
+  引入全局css变量:import '~@/asstes/styles/varibles.styl'
+
+```
+
+5. CSS开发使用stylus, stylus-loader
+```
+  npm i stylus --save
+  npm i stylus-loader --save
 ```
 ## Installation and operation/安装与运行
 ```
