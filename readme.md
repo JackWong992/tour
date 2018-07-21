@@ -22,7 +22,9 @@
   fastClick.attach(document.body)
 ```
 4. 解决图标问题，引入 `iconfont`<br>
+
 安装：<br>
+
 找到相关的图标，下载到本地，保留文件 `iconfont.eot/.svg/.ttf/.woff`至styles下的iconfont文件夹,修改`iconfont.css`的文件路径地址,加入 `./iconfont/ `<br>
 引入(router/main.js):<br>
 ```
