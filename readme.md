@@ -30,20 +30,30 @@
 ```
   import './assets/styles/iconfont.css'
 ```
+5. CSS开发使用stylus, stylus-loader
+```
+  npm i stylus --save
+  npm i stylus-loader --save
+```
+
 ## 项目开发ing<br>
-首先是home(首页)组件开发<br>
+### Home组件开发
+#### 1.1首先是home(首页)组件开发<br>
 1. header.vue部分<br>
 ```
   创建全局css变量:varibles.styl->$bgColor: #00bcd4
   引入全局css变量:import '~@/asstes/styles/varibles.styl'
 
 ```
-
-5. CSS开发使用stylus, stylus-loader
+#### 1.2 `index-swiper`组件开发
+* 使用`vue-awesome-swiper`<br>
+* 下载-引入<br>
 ```
-  npm i stylus --save
-  npm i stylus-loader --save
-```
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// require styles
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
+``` 
 ## Installation and operation/安装与运行
 ```
 # 下载到本地
