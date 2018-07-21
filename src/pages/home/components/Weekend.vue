@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
         <div class="item-img-wrapper">
           <img  class="item-img" :src="item.imgUrl">                   
         </div>
@@ -19,25 +19,8 @@
 <script>
   export default {
     name: 'HomeWeekend',
-    data () {
-      return {
-        recommendList: [{
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg',
-          title: '上海玛雅水公园1',
-          desc: '上海海玛海玛海玛海玛'
-        },{
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1603/ad/69b0fc5f48ad5f.jpg_r_640x214_b0fd5c7b.jpg',
-          title: '上海玛雅水公园2',
-          desc: '上海海玛海玛海玛海玛海玛海玛'
-        },{
-          id: '003',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1511/1d/fe098e8cfec117.jpg_r_640x214_a9be292a.jpg',
-          title: '上海玛雅水公园3',
-          desc: '上海海玛海海玛海玛海玛海玛玛海玛'
-        }]
-      }
+    props: {
+      list: Array
     }
   }
 </script>
