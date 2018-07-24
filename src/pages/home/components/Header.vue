@@ -6,10 +6,13 @@
     <div class="header-input">
       <span class="iconfont icon-search"></span>
       输入城市/景点/游玩主题</div>
-    <div class="header-right">
-      {{this.city}}
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
       <span class="iconfont icon-jiantou"></span>      
-    </div>
+      </div>
+    </router-link>
+    
   </div>
 </template>
 
@@ -49,6 +52,7 @@
       float: right 
       width: 1.24rem
       text-align: center 
+      color: #fff
       .icon-jiantou
         font-size: .24rem
 </style>
