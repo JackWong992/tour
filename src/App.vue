@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   <!-- 显示的内容就是当前路由所对应的组件 -->
   </div>
 </template>
