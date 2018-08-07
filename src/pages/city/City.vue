@@ -39,7 +39,6 @@
           .then( this.handleGetCityInfoSucc )
       },
       handleGetCityInfoSucc (res){
-        console.log(res)
          res = res.data
          if( res.ret && res.data ){
            const data = res.data
@@ -48,7 +47,6 @@
          }
       },
       handleLetterChange (letter){
-        console.log(letter)
         this.letter = letter
       }
     },
